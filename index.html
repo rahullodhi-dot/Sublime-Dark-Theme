@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sublime – The House of Tea</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sublime: {
+              dark: '#050D0A', // Very dark green/black
+              green: '#0F2820', // Forest green
+              gold: '#C5A059', // Luxury gold
+              light: '#EBE7E0', // Cream/Bone
+              accent: '#1A352B'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Lato"', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'texture': "url('https://www.transparenttextures.com/patterns/cubes.png')" // Subtle texture placeholder
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050D0A;
+      color: #EBE7E0;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #050D0A;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #1A352B;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C5A059;
+    }
+
+    /* .clip-arch {
+      clip-path: ellipse(100% 100% at 50% 0%);
+      /* Approximate arch top */
+      /* border-radius: 200px 200px 0 0; */
+    /* } */
+
+    /* .clip-arch-full {
+      border-radius: 50% 50% 0 0;
+    } */
+
+    /* .clip-frame {
+      clip-path: polygon(
+    12% 0%,
+    100% 0%,
+    100% 88%,
+    88% 100%,
+    0% 100%,
+    0% 12%
+  );
+    } */
+
+/* .clip-frame {
+  clip-path: url(#insideCircularCut);
+}  */
+
+
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
+    "gsap": "https://esm.sh/gsap@^3.14.2"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
