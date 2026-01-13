@@ -97,19 +97,21 @@ const Founder: React.FC = () => {
 
 
 
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1180px]  mx-auto px-6">
         {/* TITLE */}
         <AnimatedTitle
           title="From Our Founder"
           subtitle="The Story"
           align="center"
+            containerClass="mb-6"
           text="#E8B879"
+             textClass='font-gotham'
         />
 
         {/* CONTENT */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* LEFT TEXT */}
-          <div className="founder-text space-y-8 text-sublime-light/80 font-unbounded text-[24px] leading-8 tracking-wide">
+          <div className="founder-text space-y-8 text-sublime-light/70 font-unbounded text-[16px] leading-8 tracking-wide">
             <p className="opacity-0 will-change-transform font-unbounded">
          More than tea, spices, nuts, or honey, Sublime House of Tea is an appreciative experience of Health and Wellness. Founded in 2013, Sublime House of Tea, much like Prestige, is an initiative, which brings together, supreme quality, trust, authenticity, and freshness to your daily lives, through your kitchens.
             </p>
@@ -145,19 +147,19 @@ const Founder: React.FC = () => {
                     <img
                       src={founderImage}
                       alt="Uzma Irfan"
-                      className="max-w-full clip-frame max-h-full object-contain founder-img"
+                      className="max-w-full clip-frame max-h-[80%] object-contain founder-img"
                     />
                   </div>
                 </div>
               </div>
 
               {/* TEXT BELOW */}
-              <div className="mt-12 text-center">
-                <h4 className="text-sublime-gold font-serif text-3xl tracking-wide">
+              <div className="-mt-12 text-center">
+                <h4 className="text-sublime-gold font-gotham text-xl tracking-wide">
                   Uzma Irfan
                   <Divider width={20}/>
                 </h4>
-                <p className="text-white/50 text-xs uppercase tracking-[0.35em] mt-2">
+                <p className="text-white/50 text-xs font-gotham uppercase tracking-[0.35em] mt-2">
                   Founder, Sublime House of Tea
                 </p>
               </div>
