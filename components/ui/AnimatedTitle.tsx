@@ -19,7 +19,7 @@ interface AnimatedTitleProps {
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ 
   showDivider=true,
   title, 
-  containerClass = '', 
+  containerClass = 'font-gotham', 
   textClass = '', 
   subtitle,
   align = 'center',
@@ -116,18 +116,18 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   const flexAlign = align === 'center' ? 'justify-center' : align === 'right' ? 'justify-end' : 'justify-start';
 
   return (
-    <div ref={containerRef} className={`flex flex-col ${flexAlign} ${containerClass} perspective-1000`}>
+    <div ref={containerRef} className={`flex flex-col ${flexAlign} ${containerClass} mt-16 perspective-1000`}>
       {subtitle && (
-        <p className={`anim-subtitle text-[${text}] text-xs md:text-sm font-sans mb-2 uppercase tracking-widest ${alignmentClass} font-medium opacity-0 will-change-transform`}>
+        <p className={`anim-subtitle text-[${text}] text-xs md:text-sm mb-2   uppercase font-gotham ${alignmentClass} font-medium opacity-0 will-change-transform`}>
           {subtitle}
         </p>
       )}
       
-      <h2 className={`font-serif text-[${text}] text-4xl md:text-6xl lg:text-7xl  leading-[1.15] ${textClass} ${alignmentClass} perspective-1000`}>
+      <h2 className={`   text-[${text}] text-6xl   mx-auto   ${textClass} ${alignmentClass} `}>
         {words.map((word, wordIndex) => (
           <span 
             key={wordIndex} 
-            className="inline-block whitespace-nowrap mr-[0.25em] overflow-hidden py-2 -my-2"
+            className={`inline-block whitespace-nowrap mr-[0.25em] ${containerClass}`}
           >
             {word.split('').map((char, charIndex) => (
               <span 
@@ -143,7 +143,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
       
       {/* Decorative Line for Center Alignment */}
       {align === 'center' && showDivider && (
-        <div className="w-full flex justify-center mt-1 items-center gap-6 opacity-80">
+        <div className="w-full flex justify-center -mt-2 items-center gap-6 opacity-80">
           <Divider width={50}/>
            {/* <div className="deco-line h-[1px] w-12 md:w-24 bg-gradient-to-l from-sublime-gold to-transparent origin-right opacity-0 will-change-transform"></div>
            <div className="deco-symbol text-sublime-gold text-[10px] opacity-0 will-change-transform">◆</div>

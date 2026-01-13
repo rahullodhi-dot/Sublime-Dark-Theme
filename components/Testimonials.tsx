@@ -135,12 +135,13 @@ const Testimonials: React.FC = () => {
       ref={containerRef}
       className="py-12 bg-sublime-dark relative border-t border-white/5"
     >
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto  px-6">
         <AnimatedTitle
           title="What Our Customers Say"
           subtitle="Hear From Our Customers"
           containerClass="mb-6"
           text="#E8B879"
+             textClass='font-gotham'
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 items-center">
@@ -156,11 +157,11 @@ const Testimonials: React.FC = () => {
                 className={`
                  
                   relative z-10
-                  ${index === 1 ? "min-h-[580px]" : "min-h-[400px]"}
+                  ${index === 1 ? "min-h-[460px] " : "min-h-[400px]"}
                   w-full
-                  flex flex-col items-center text-center
+                  flex flex-col border  items-center text-center
                   bg-[#FFF7EA]
-                  px-10 py-14
+                  px-10 py-6
                   rounded-3xl
                   shadow-xl shadow-gray-800/40
                 `}
@@ -175,7 +176,7 @@ const Testimonials: React.FC = () => {
                 <img src={reviewImg} className="w-full h-full object-contain" />
               </div>
                 {/* AVATAR */}
-                <div className="w-48 h-48 rounded-full border border-black/20 p-1 bg-gold shadow-xl">
+                <div className="w-32  h-32 rounded-full border border-black/20 p-1 bg-gold shadow-xl">
                   <img
                     src={review.image}
                     onError={(e) => (e.currentTarget.src = FALLBACK_AVATAR)}
@@ -184,13 +185,13 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 {/* STARS */}
-                <div className="mt-12 mb-4 flex gap-1">
+                <div className="mt-6 mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={28} className="fill-sublime-gold text-sublime-gold" />
                   ))}
                 </div>
 
-                <h4 className="font-serif text-xl text-[#0C6A64] font-medium mb-4">
+                <h4 className="font-gotham opacity-80 text-xl text-[#0C6A64] font-medium mb-4">
                   {review.title}
                 </h4>
 
