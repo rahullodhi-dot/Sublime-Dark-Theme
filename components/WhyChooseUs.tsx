@@ -138,7 +138,7 @@ useLayoutEffect(() => {
   return (
     <section
       ref={containerRef}
-      className="py-32 min-h-screen bg-sublime-dark relative overflow-hidden"
+      className="py-32 min-h-screen container font-Gotham bg-sublime-dark relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none mix-blend-overlay">
         <img
@@ -148,23 +148,24 @@ useLayoutEffect(() => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="max-w-[1180px] mx-auto px-6 relative z-10">
         <AnimatedTitle
           title="Why Choose Us"
           subtitle="AWESOME PRODUCTS"
-          containerClass="mb-20"
+          containerClass=""
           text="#E8B879"
+             textClass='font-gotham'
         />
 
         <div
           ref={svgContainerRef}
-          className="relative w-full h-[20vw] gap-12 flex items-center justify-center"
+          className="relative w-full h-[22vw] mt-20  gap-12 flex items-center justify-center"
         >
           {features.map((f, i) => (
             <div
               key={i}
-              className={`feature-item w-64 py-6 px-6 flex flex-col items-center t ${
-                i % 2 === 0 ? 'mb-6' : 'mt-6'
+              className={`feature-item w-72  text-center px-6 flex flex-col   ${
+                i % 2 === 0 ? 'mb-[100px]' : 'mt-[100px]'
               }`}
             >
               <h2 className="text-xl font-bold">{f.title}</h2>
@@ -195,7 +196,7 @@ useLayoutEffect(() => {
           </svg>
 
           {points.map((p, i) => (
-            <div key={i} className="absolute" style={{ left: 0, top: 0 }}>
+            <div key={i} className="absolute" style={{ left: 0, top: i % 2 === 0 ? "-18px" :"18px" }}>
               <svg
                 className="absolute pointer-events-none"
                 style={{ left: 0, top: 0 }}

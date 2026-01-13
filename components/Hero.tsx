@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div ref={contentRef} className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-4 pt-24">
+      <div ref={contentRef} className="relative max-w-[1260px] text-center mx-auto z-10 w-full h-screen flex flex-col justify-center items-center px-4 pt-24">
         <div className="max-w-6xl mx-auto text-center perspective-1000">
           
           <AnimatedTitle 
@@ -102,7 +102,8 @@ const Hero: React.FC = () => {
             subtitle="Exquisite Craftsmanship"
             sectionType="hero"
             align="center"
-            textClass="text-5xl md:text-7xl lg:text-9xl italic tracking-tight drop-shadow-2xl"
+            textClass=" font-buttain max-w-2xl md:text-4xl lg:text-6xl  "
+            containerClass="my-8"
           />
 
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-10">
@@ -112,8 +113,8 @@ const Hero: React.FC = () => {
                 onMouseLeave={handleBtnLeave}
                 onClick={handleBtnClick}
             >
-              <div className="btn-bg absolute inset-0 bg-sublime-gold opacity-[0.05] transition-opacity duration-300"></div>
-              <span className="btn-text relative font-unbounded text-sm tracking-[0.25em] uppercase text-sublime-light group-hover:text-sublime-gold transition-colors duration-300 block">
+              <div className="btn-bg font-gotham absolute inset-0 bg-sublime-gold opacity-[0.05] transition-opacity duration-300"></div>
+              <span className="btn-text relative  text-sm tracking-[0.25em] uppercase text-sublime-light group-hover:text-sublime-gold transition-colors duration-300 block">
               Explore Now 
               </span>
             </button>
@@ -136,7 +137,7 @@ const Hero: React.FC = () => {
 
       {/* Elegant Scroll Indicator */}
       <div className="scroll-indicator absolute bottom-32 md:bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center opacity-0 pointer-events-none">
-        <span className="text-[9px] uppercase tracking-[0.3em] text-sublime-gold/60 mb-6">Scroll</span>
+        <span className="text-[12px] uppercase tracking-[0.3em] text-sublime-gold/60 mb-6">Scroll</span>
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent via-sublime-gold/30 to-transparent relative overflow-hidden">
           <div className="absolute top-0 w-full h-1/2 bg-gradient-to-b from-transparent to-sublime-gold animate-slide-down opacity-80"></div>
         </div>

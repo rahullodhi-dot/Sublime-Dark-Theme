@@ -117,12 +117,13 @@ const BestSellers: React.FC = () => {
       <RotatedLuxuryText side="right" position="right-20" />
       <RotatedLuxuryText side="left" position="left-20" />
 
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto px-6">
         <AnimatedTitle
           title="Our Best Selling Products"
           subtitle="ONLY BUY GOOD"
           containerClass="mb-6"
           text="#E8B879"
+          textClass="font-gotham"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
@@ -150,7 +151,7 @@ const BestSellers: React.FC = () => {
               </div>
 
               <div className="text-center space-y-2">
-                <h3 className="font-serif text-xl text-sublime-light group-hover:text-sublime-gold transition">
+                <h3 className="font-gotham opacity-80 text-xl text-sublime-light group-hover:text-sublime-gold transition">
                   {product.name}
                 </h3>
                 <p className="text-sm text-white/50 tracking-wider">
@@ -162,10 +163,10 @@ const BestSellers: React.FC = () => {
         </div>
 
         <div className="mt-6 flex justify-center gap-8">
-          <button className="p-6 border border-sublime-gold rounded-full">
+          <button className="p-2 border border-sublime-gold rounded-full">
             <ArrowLeft />
           </button>
-          <button className="p-6 border border-sublime-gold rounded-full">
+          <button className="p-2 border border-sublime-gold rounded-full">
             <ArrowRight />
           </button>
         </div>

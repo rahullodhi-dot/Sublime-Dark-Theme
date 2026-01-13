@@ -17,30 +17,40 @@
         extend: {
           colors: {
             sublime: {
-              dark: '#050D0A', // Very dark green/black
-              green: '#0F2820', // Forest green
-              gold: '#C5A059', // Luxury gold
-              light: '#EBE7E0', // Cream/Bone
+              dark: '#050D0A',
+              green: '#0F2820',
+              gold: '#C5A059',
+              light: '#EBE7E0',
               accent: '#1A352B'
             }
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'serif'],
             sans: ['"Lato"', 'sans-serif'],
+            gotham: ['Gotham', 'sans-serif'],
+            buttain: ['Buttain', 'sans-serif']
           },
           backgroundImage: {
             'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            'texture': "url('https://www.transparenttextures.com/patterns/cubes.png')" // Subtle texture placeholder
+            'texture': "url('https://www.transparenttextures.com/patterns/cubes.png')"
           }
         }
       }
     }
   </script>
+
   <style>
     body {
       background-color: #050D0A;
       color: #EBE7E0;
       overflow-x: hidden;
+      font-family: 'Gotham', sans-serif;
+      /* ✅ default font */
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
     }
 
     /* Custom Scrollbar */
@@ -61,11 +71,62 @@
       background: #C5A059;
     }
 
+
+    @font-face {
+      font-family: 'Gotham';
+      src: url('./assests/fonts/Gotham.woff2') format('woff2'),
+        url('./assests/fonts/Gotham.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Gotham';
+      src: url('./assests/fonts/Gotham-Bold.woff2') format('woff2'),
+        url('./assests/fonts/Gotham-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Buttain';
+      src: url('./assests/fonts/Buttain-Regular.woff2') format('woff2'),
+        url('./assests/fonts/Buttain-Regular.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    /* ================== FONT FACE ================== */
+    /* @font-face {
+      font-family: 'Gotham';
+      src: url('.assests/fonts/Gotham.woff2') format('woff2'),
+           url('.assests/fonts/Gotham.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    
+
+    @font-face {
+      font-family: 'Gotham';
+      src: url('.assests/fonts/Gotham-Bold.woff2') format('woff2'),
+           url('.assests/fonts/Gotham-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Buttain';
+      src: url('./assests/fonts/Buttain-Regular.woff2') format('woff2'),
+           url('.assests/fonts/Buttain-Regular.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    } */
+
+    /* ======= existing commented clip paths (unchanged) ======= */
     /* .clip-arch {
       clip-path: ellipse(100% 100% at 50% 0%);
-      /* Approximate arch top */
-      /* border-radius: 200px 200px 0 0; */
-    /* } */
+    } */
 
     /* .clip-arch-full {
       border-radius: 50% 50% 0 0;
@@ -73,33 +134,28 @@
 
     /* .clip-frame {
       clip-path: polygon(
-    12% 0%,
-    100% 0%,
-    100% 88%,
-    88% 100%,
-    0% 100%,
-    0% 12%
-  );
+        12% 0%,
+        100% 0%,
+        100% 88%,
+        88% 100%,
+        0% 100%,
+        0% 12%
+      );
     } */
-
-/* .clip-frame {
-  clip-path: url(#insideCircularCut);
-}  */
-
-
   </style>
+
   <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "gsap/": "https://esm.sh/gsap@^3.14.2/",
-    "gsap": "https://esm.sh/gsap@^3.14.2"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "gsap/": "https://esm.sh/gsap@^3.14.2/",
+        "gsap": "https://esm.sh/gsap@^3.14.2"
+      }
+    }
+  </script>
   <link rel="stylesheet" href="/index.css">
 </head>
 

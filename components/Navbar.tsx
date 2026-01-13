@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Search, User, ShoppingBag, Menu, X } from 'lucide-react';
 import gsap from 'gsap';
 import { NavLink } from '../types';
+import darkLogo from "../assests/Dark-Logo.png"
 
 const navLinks: NavLink[] = [
   { label: 'Loose Tea', href: '#' },
@@ -51,22 +52,15 @@ const  Navbar: React.FC = () => {
   return (
     <nav 
       ref={navRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b border-white/5 ${
-        isScrolled ? 'bg-sublime-dark/80 backdrop-blur-xl py-4 shadow-lg' : 'bg-transparent py-8'
+      className={`fixed top-0  left-0 w-full z-50 transition-all duration-700 border-b border-white/5 ${
+        isScrolled ? 'bg-sublime-dark/80 backdrop-blur-xl py-4 shadow-lg' : 'bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-12 flex items-center justify-between">
         
         {/* Logo */}
-        <div className="flex-shrink-0 z-50">
-           <a href="#" className="flex flex-col items-center group">
-             <span className="font-serif text-2xl md:text-3xl text-white tracking-wide group-hover:text-sublime-gold transition-colors duration-500">
-               Sublime
-             </span>
-             <span className="text-[0.5rem] md:text-[0.6rem] text-sublime-gold tracking-[0.3em] uppercase mt-1 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-               The House of Tea
-             </span>
-           </a>
+        <div className="flex-shrink-0 w-[130px]  z-50">
+          <img src={darkLogo} alt=""  className='w-full h-full'/>
         </div>
 
         {/* Desktop Links */}
@@ -75,7 +69,7 @@ const  Navbar: React.FC = () => {
             <a 
               key={link.label} 
               href={link.href}
-              className="text-xs lg:text-sm text-sublime-light tracking-[0.15em] uppercase relative py-2"
+              className="text-xs font-gotham  lg:text-xs text-sublime-light tracking-[0.15em] uppercase relative py-2"
               onMouseEnter={handleLinkEnter}
               onMouseLeave={handleLinkLeave}
             >

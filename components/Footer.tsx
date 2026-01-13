@@ -76,11 +76,11 @@ const Footer: React.FC = () => {
 
       {/* CONTENT */}
       <div className="container mx-auto px-6 relative z-10 flex flex-col  mt-20 items-center text-center">
-        <h3 className="footer-title font-serif text-3xl md:text-5xl max-w-3xl mb-6">
+        <h3 className="footer-title font-gotham text-3xl md:text-5xl max-w-3xl mb-6">
           Subscribe to our newsletter for more updates.
         </h3>
 
-        <p className="footer-text text-white/80 text-sm md:text-base max-w-2xl mb-10 uppercase">
+        <p className="footer-text font-gotham text-white/80 text-sm md:text-base max-w-2xl mb-10 uppercase">
           Sublime House of Tea is more than just a cup of tea, a jar of honey, or a
           spice. Founded in 2013, Sublime brings freshness and authenticity.
         </p>
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
             placeholder="Your Email Address"
             className="flex-1 bg-white/5 border border-white rounded-full px-8 py-4 text-sm text-white placeholder:text-white/60 focus:outline-none"
           />
-          <button className="px-10 py-4 border border-white text-white rounded-full text-xs uppercase tracking-widest hover:bg-sublime-gold hover:text-sublime-dark transition">
+          <button className="px-10 py-4 font-gotham border border-white text-white rounded-full text-xs uppercase tracking-widest hover:bg-sublime-gold hover:text-sublime-dark transition">
             Subscribe
           </button>
         </div>

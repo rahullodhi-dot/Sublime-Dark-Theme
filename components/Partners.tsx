@@ -67,7 +67,7 @@ const Partners: React.FC = () => {
           title="Our Trusted Partners"
           subtitle="Trust We Gain"
           text="#E8B879"
-          containerClass="mb-16"
+          containerClass=""
         />
 
         <p className="text-sublime-gold text-xs tracking-[0.2em] uppercase mb-12">
