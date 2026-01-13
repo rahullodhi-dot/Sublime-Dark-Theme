@@ -161,12 +161,14 @@ const Categories: React.FC = () => {
 
       <div className="absolute inset-0 opacity-[0.03] bg-texture pointer-events-none mix-blend-overlay"></div>
 
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto px-6">
         <AnimatedTitle
         text="#E8B879"
           title="Shop by Category"
           subtitle="SOMETHING FOR EVERYONE"
-          containerClass="mb-6"
+          containerClass="6"
+          align='center'
+          textClass='font-gotham'
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
@@ -216,7 +218,7 @@ const Categories: React.FC = () => {
 
               {/* CONTENT BELOW IMAGE */}
               <div className="mt-6 flex  items-center text-center z-20">
-                <span className="font-serif  text-2xl text-sublime-gold tracking-wide drop-shadow-lg px-4">
+                <span className="  text-lg font-gotham text-sublime-gold tracking-wide drop-shadow-lg px-4">
                   {cat.name}
                 </span>
 
