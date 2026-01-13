@@ -67,13 +67,13 @@ const MainFooter: React.FC = () => {
         {/* TAGLINE */}
         <p
           ref={addItem}
-          className="max-w-xl mx-auto text-center font-unbounded text-[16px] leading-[30px] text-white/90 mb-6"
+          className="max-w-xl mx-auto text-center font-gotham text-[16px] leading-[30px] text-white/90 mb-6"
         >
           Sublime House of Tea is more than just a cup of tea, a jar of honey, or a spice. Founded in 2013, Sublime aims to bring freshness, superior quality, and authenticity to our daily lives.
         </p>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 border-t border-white/10 pt-16 text-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-[1180px] mx-auto lg:grid-cols-4 gap-14 border-t border-white/10 pt-16 text-white">
           
           {/* Discover */}
           <div>
@@ -141,13 +141,13 @@ const MainFooter: React.FC = () => {
             </h4>
          <div className="flex gap-6 text-white/70">
           <a  className="hover:text-sublime-gold   h-fit w-fit border-sublime-gold rounded-full transition">
-             <svg  className="border  p-3 rounded-full"  ref={addItem} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"> <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#E8B879" /> </svg> </a> 
-             <a   className="hover:text-sublime-gold   h-fit w-fit border-sublime-gold rounded-full  transition"> <svg className="border  p-3 rounded-full"  ref={addItem} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 28 28" fill="none"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 12.8333C3.5 8.43383 3.5 6.2335 4.86733 4.86733C6.23467 3.50117 8.43383 3.5 12.8333 3.5H15.1667C19.5662 3.5 21.7665 3.5 23.1327 4.86733C24.4988 6.23467 24.5 8.43383 24.5 12.8333V15.1667C24.5 19.5662 24.5 21.7665 23.1327 23.1327C21.7653 24.4988 19.5662 24.5 15.1667 24.5H12.8333C8.43383 24.5 6.2335 24.5 4.86733 23.1327C3.50117 21.7653 3.5 19.5662 3.5 15.1667V12.8333ZM21 8.75C21 9.21413 20.8156 9.65925 20.4874 9.98744C20.1592 10.3156 19.7141 10.5 19.25 10.5C18.7859 10.5 18.3408 10.3156 18.0126 9.98744C17.6844 9.65925 17.5 9.21413 17.5 8.75C17.5 8.28587 17.6844 7.84075 18.0126 7.51256C18.3408 7.18437 18.7859 7 19.25 7C19.7141 7 20.1592 7.18437 20.4874 7.51256C20.8156 7.84075 21 8.28587 21 8.75ZM16.3333 15.1667C16.3333 15.7855 16.0875 16.379 15.6499 16.8166C15.2123 17.2542 14.6188 17.5 14 17.5C13.3812 17.5 12.7877 17.2542 12.3501 16.8166C11.9125 16.379 11.6667 15.7855 11.6667 15.1667C11.6667 14.5478 11.9125 13.9543 12.3501 13.5168C12.7877 13.0792 13.3812 12.8333 14 12.8333C14.6188 12.8333 15.2123 13.0792 15.6499 13.5168C16.0875 13.9543 16.3333 14.5478 16.3333 15.1667ZM18.6667 15.1667C18.6667 16.4043 18.175 17.5913 17.2998 18.4665C16.4247 19.3417 15.2377 19.8333 14 19.8333C12.7623 19.8333 11.5753 19.3417 10.7002 18.4665C9.825 17.5913 9.33333 16.4043 9.33333 15.1667C9.33333 13.929 9.825 12.742 10.7002 11.8668C11.5753 10.9917 12.7623 10.5 14 10.5C15.2377 10.5 16.4247 10.9917 17.2998 11.8668C18.175 12.742 18.6667 13.929 18.6667 15.1667Z" fill="#E8B879" /> </svg> </a> </div>
+             <svg  className="border  p-3 rounded-full"  ref={addItem} xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"> <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#E8B879" /> </svg> </a> 
+             <a   className="hover:text-sublime-gold   h-fit w-fit border-sublime-gold rounded-full  transition"> <svg className="border  p-3 rounded-full"  ref={addItem} xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 28 28" fill="none"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 12.8333C3.5 8.43383 3.5 6.2335 4.86733 4.86733C6.23467 3.50117 8.43383 3.5 12.8333 3.5H15.1667C19.5662 3.5 21.7665 3.5 23.1327 4.86733C24.4988 6.23467 24.5 8.43383 24.5 12.8333V15.1667C24.5 19.5662 24.5 21.7665 23.1327 23.1327C21.7653 24.4988 19.5662 24.5 15.1667 24.5H12.8333C8.43383 24.5 6.2335 24.5 4.86733 23.1327C3.50117 21.7653 3.5 19.5662 3.5 15.1667V12.8333ZM21 8.75C21 9.21413 20.8156 9.65925 20.4874 9.98744C20.1592 10.3156 19.7141 10.5 19.25 10.5C18.7859 10.5 18.3408 10.3156 18.0126 9.98744C17.6844 9.65925 17.5 9.21413 17.5 8.75C17.5 8.28587 17.6844 7.84075 18.0126 7.51256C18.3408 7.18437 18.7859 7 19.25 7C19.7141 7 20.1592 7.18437 20.4874 7.51256C20.8156 7.84075 21 8.28587 21 8.75ZM16.3333 15.1667C16.3333 15.7855 16.0875 16.379 15.6499 16.8166C15.2123 17.2542 14.6188 17.5 14 17.5C13.3812 17.5 12.7877 17.2542 12.3501 16.8166C11.9125 16.379 11.6667 15.7855 11.6667 15.1667C11.6667 14.5478 11.9125 13.9543 12.3501 13.5168C12.7877 13.0792 13.3812 12.8333 14 12.8333C14.6188 12.8333 15.2123 13.0792 15.6499 13.5168C16.0875 13.9543 16.3333 14.5478 16.3333 15.1667ZM18.6667 15.1667C18.6667 16.4043 18.175 17.5913 17.2998 18.4665C16.4247 19.3417 15.2377 19.8333 14 19.8333C12.7623 19.8333 11.5753 19.3417 10.7002 18.4665C9.825 17.5913 9.33333 16.4043 9.33333 15.1667C9.33333 13.929 9.825 12.742 10.7002 11.8668C11.5753 10.9917 12.7623 10.5 14 10.5C15.2377 10.5 16.4247 10.9917 17.2998 11.8668C18.175 12.742 18.6667 13.929 18.6667 15.1667Z" fill="#E8B879" /> </svg> </a> </div>
           </div>
         </div>
 
         {/* COPYRIGHT */}
-        <div ref={addItem} className="text-center mt-20 text-xs text-white/80 tracking-widest uppercase">
+        <div  className="text-center font-gotham mt-20 text-xs text-white/80 tracking-widest uppercase">
           © 2025 Sublime House of Tea. All Rights Reserved.
         </div>
       </div>

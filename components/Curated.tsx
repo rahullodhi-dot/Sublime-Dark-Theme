@@ -84,7 +84,7 @@ useLayoutEffect(() => {
       scrub: true,
       toggleActions: "play reverse play reverse",
       onUpdate: (self) => {
-        const tilt = gsap.utils.clamp(-2, 2, self.getVelocity() / 900);
+        const tilt = gsap.utils.clamp(0, 0, self.getVelocity() / 900);
 
         gsap.to(".curated-card", {
           rotateX: tilt,
@@ -113,7 +113,7 @@ useLayoutEffect(() => {
   });
 
   gsap.to(card.querySelector("img"), {
-    scale: 1.08,
+    scale: 1,
     duration: 0.8,
     ease: "power2.out",
   });
@@ -141,12 +141,13 @@ const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     <section ref={containerRef} className="py-24 overflow-hidden bg-sublime-dark border-t border-white/5 relative z-10">
       <RotatedLuxuryText side="right" position="right-20" />
       <RotatedLuxuryText side="left" position="left-20" />
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto px-6">
         <AnimatedTitle
           title="Shop the Best"
           subtitle="GO THROUGH OUR BEST"
-          containerClass="mb-6"
+          containerClass=""
           text="#E8B879"
+             textClass='font-gotham'
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -179,17 +180,17 @@ const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
                 </defs>
               </svg>}
 
-              {/* 🟢 CARD (CLIPPED) */}
+              {/*  CARD (CLIPPED) */}
               <div
-                className="curated-card relative w-full aspect-[3/5] group overflow-hidden rounded-t-[12rem] bg-[#0a1510] cursor-pointer opacity-0 will-change-transform"
+                className="curated-card relative p-0 m-0  w-full aspect-[3/5] group overflow-hidden rounded-t-[12rem] bg-[#0a1510] cursor-pointer opacity-0 will-change-transform"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 {/* BORDER */}
-                <div className="card-border absolute inset-0 pointer-events-none z-30 transition-colors" />
+                <div className="card-border absolute inset-0 pointer-events-none z-30 " />
 
                 {/* OVERLAYS */}
-                <div className="overlay-dim absolute inset-0 bg-black opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
+                {/* <div className="overlay-dim absolute inset-0 bg-black opacity-0 transition-opacity duration-500 z-10 pointer-events-none" /> */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10 pointer-events-none" />
 
                 {/* IMAGE */}
@@ -202,7 +203,7 @@ const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
 
                 {/* TEXT */}
                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-end p-8 text-center pointer-events-none">
-                  <h3 className="curated-title font-serif text-2xl text-white mb-3 drop-shadow-xl">
+                  <h3 className="curated-title font-gotham text-xl text-white/80  drop-shadow-xl">
                     {slide.title}
                   </h3>
 
@@ -220,18 +221,18 @@ const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
 
 
         <div className="mt-8 flex justify-center">
-          <button className="h-fit w-fit p-5 rounded-full  border border-sumblime-gold  text-sublime-light rounded-full text-xs tracking-[0.2em] uppercase hover:bg-sublime-gold hover:text-sublime-dark transition">
+          <button className="h-fit w-fit p-2 rounded-full  border border-sumblime-gold  text-sublime-light rounded-full text-xs tracking-[0.2em] uppercase hover:bg-sublime-gold hover:text-sublime-dark transition">
             <ArrowLeft />
           </button>
 
-          <div className="mx-12 flex items-center gap-4">
+          <div className="mx-4 flex items-center gap-2">
             <div className="w-4 h-2 rounded-full bg-sublime-gold"></div>
             <div className="w-12 h-2 rounded-full bg-sublime-gold"></div>
             <div className="w-4 h-2 rounded-full bg-sublime-gold"></div>
 
           </div>
 
-          <button className="h-fit w-fit p-5 rounded-full  border border-sumblime-gold  text-sublime-light rounded-full text-xs tracking-[0.2em] uppercase hover:bg-sublime-gold hover:text-sublime-dark transition">
+          <button className="h-fit w-fit p-2 rounded-full  border border-sumblime-gold  text-sublime-light rounded-full text-xs tracking-[0.2em] uppercase hover:bg-sublime-gold hover:text-sublime-dark transition">
             <ArrowRight />
           </button>
         </div>
