@@ -94,7 +94,7 @@ const Blog: React.FC = () => {
 
             <div className="absolute inset-0 opacity-[0.03]  bg-texture pointer-events-none mix-blend-overlay"></div>
 
-            <div className="container mx-auto px-6">
+            <div className="max-w-[1180px] mx-auto px-6">
                 <AnimatedTitle
                     text="#E8B879"
                     title="Our Latest Blog"
@@ -102,11 +102,11 @@ const Blog: React.FC = () => {
                     containerClass="mb-6"
                 />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 oveflow-scroll gap-2 md:gap-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 oveflow-scroll gap-8 md:gap-1">
                     {categories.map((cat, index) => (
                         <div
                             key={index}
-                            className="category-capsule overflow-hidden rounded-xl  border-2 border-sublime-gold group relative  w-[450px] h-[550px] bg-[#0a1510]  shadow-2xl opacity-0"
+                            className="category-capsule overflow-hidden rounded-xl   border-2 border-sublime-gold group relative  w-[370px] h-[500px] bg-[#0a1510]  shadow-2xl opacity-0"
                         >
 
 
@@ -156,18 +156,18 @@ const Blog: React.FC = () => {
                             {/* CONTENT */}
                             <div className=" p-5 flex flex-col justify-between">
                                 {/* TITLE */}
-                                <h3 className="font-serif text-[24px] font-[400px] text-sublime-gold tracking-wide leading-snug">
+                                <h3 className="font-gotham text-[18px] font-[100px] text-sublime-gold tracking-wide leading-snug">
                                     {cat.title}
                                 </h3>
 
                                 {/* DESCRIPTION */}
-                                <p className="text-[16px]  text-white/70 font-light line-clamp-4 mt-2">
+                                <p className="text-[14px] font-gotham  text-white/70 font-light line-clamp-4 mt-2">
                                     {cat.description}
                                 </p>
 
                                 {/* READ MORE */}
                                 <div className="mt-4 flex items-center gap-2 text-sublime-gold text-sm cursor-pointer group-hover:gap-3 transition-all">
-                                    <span className="uppercase tracking-widest">Read More</span>
+                                    <span className="uppercase tracking-widest font-gotham ">Read More</span>
                                     <ArrowUpRight size={18} />
                                 </div>
                             </div>
@@ -178,8 +178,8 @@ const Blog: React.FC = () => {
                 </div>
 
                 <div className=" flex justify-center items-center py-5 mt-10 gap-3">
-                    <button className="px-10  py-3 rounded-full  border  border-sublime-light  text-2xl">View More Article</button>
-                    <button className="h-fit w-fit p-5 border rounded-full"><ArrowUpRight/></button>
+                    <button className="px-10  py-3 rounded-full  border  border-sublime-light  text-lg">View More Article</button>
+                    <button className="h-fit w-fit p-3 border rounded-full"><ArrowUpRight/></button>
                 </div>
 
             </div>
